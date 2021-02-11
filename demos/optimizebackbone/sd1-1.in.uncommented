@@ -1,0 +1,91 @@
+#########################################################################################
+# This file serve as a template from which an input controlling SCUBA SD can be prepared.
+# Steps to prepare an input:
+# 1.Uncomment the "key=value" lines (only uncomment those lines you need)
+# 2.Edit the values to suit your need.
+# 3.Save the resuls to a file (e.g., as "myinput.uncommented")
+# 4.Finally, remove all the comment lines (those starting with "###") 
+#   to generate the actual input to use (e.g.: sed -e '/^#/d' myinput.uncommented >myinput.in)
+#########################################################################################
+START SDInputOutput
+###the final structure will be written to this file
+OutputPDBFile	=	out1-1.pdb
+###change this randomseed to different values repeat the sampling for different results
+SDSeed=seedvalue
+###number of SD steps to simulate 1 picosecond = 500 steps
+SDTotalSteps	=	5000
+#SDTotalSteps	=	60000
+END SDInputOutput
+START SD
+DoShake	=	1
+NeighborListSteps	=	50
+###integration time step, in picosecond
+TimeStep	=	0.002
+###frictional coefficient for SD  
+###use 5.0 for quenching 
+FrictionCoeff	=	5.0
+###or use 0.5 for sampling
+#FrictionCoeff	=	0.5
+###reduced temperature of thermal bath
+### 1.0 approximately coorespond to ambient temperature
+Temperatures	=	0.1
+###simulated annealing parameters, in this example, t_high=2.0, t_low=0.5, steps_per_cycle=5000,
+###2000 at t_hight, 500 steps dropping from t_high to t_low, and 5000-(2000+500)=2500 steps at t_low
+#AnnealingScheme	=	0 2.0 0.5 5000 2000 500
+###how frequently to write configuration to trajectory
+NTrajSteps	=	0
+###file to store the SD trajectory
+#TrajFile	= simulation1.trj	
+END SD
+START GenChain
+### the SD starting structure 
+StartPDBFile	=	initial.pdb
+###a reference PDB structure, here it's the same as the starting PDB structure
+RefPDBFile	=  	initial.pdb
+###sidechain types are from the RefPDBFile
+SCTypeFrom	=	refpdb
+###sidechain types are from the sequence string
+#SCTypeFrom  = seqstring
+#SeqString = VVVVVVVGGGGGGGLLLLLLLLLLLLLLLLGGGGGGGGVVVVVVVGGGGGGVVVVVVVGGGGGGGLLLLLLLLLLLLLLLLGGGGGGGGVVVVVVV
+###or sidechain types are determined based on secondary structure types (LVG) 
+#SCTypeFrom = sstypeinrefpdb
+#TypeInCoil	=	GLY
+#TypeInHelix	=	LEU
+#TypeInStrand	=	VAL
+###sidechain coordinates are from start pdb, or randomly generated 
+SCCoordFrom	=	startpdb_plus_random
+### side chain coordinate only from starting PDB
+#SCCoordFrom	=	startpdb_only
+### side chain coordinate randomly generated
+#SCCoordFrom	=	all_random
+END GenChain
+START ForceField
+#weights of various energy types
+PhiPsiWeight	=	2.00
+LSWeight	=	0.50
+LocalHBWeight	=	0.60
+PairPackingWeight	=	0.32
+StericWeight	=	1.40
+#At this stage we do not consider sidechain interactions
+SideConfWeight	=	0.0
+SCPackingWeight	=	0.0
+#SideConfWeight	=	2.4
+#SCPackingWeight	=	3.1
+###this defines segments that will be restrained to have extended local conformations
+###they are expected to form beta-strands. 
+#these segments are residues 0-6, 38-44,51-57, 89-95, all in chain 0
+ExtendRestrains	=	0 0 6 0 38 44 0 51 57 0 89 95
+###segments restrained to have helix conformation
+#these segments are residues 14-29,65-80, all in chain 0. 
+#The values 0.7 and 1000 are parameters defining accuracy (maximum accuracy 1.0) and force constant of restraints
+HelixRestrains	=	0 14 29 0.7 1000 0 65 80 0.7 1000
+###interaction strengths involving loops (residues 7-13, 30-37,45-50,58-64, and 81-88, inclusive, all in chain 0) are scaled
+###the scaling factor is 0.001
+LoopRegionWeights      =        0 7 13 0.001 0 30 37 0.001 0 45 50 0.001 0 58 64 0.001 0 81 88 0.001
+###radius of gyration restraints. The restraint is off when Rg is below 5.0, 
+###the force constant is 300 (the negative sign indicate logrithm form)
+RgRestrain	=	5.0 -300.0
+###this defines a core region to which the radius of gyration restraints will be applied
+###here, the core region includes residues 0-6,14-29,38-44,51-57,65-80 and 89-95 (inclusive ranges) of chain 0
+CoreRegion	=	0 0 6 0 14 29 0 38 44 0 51 57 0 65 80 0 89 95
+END ForceField

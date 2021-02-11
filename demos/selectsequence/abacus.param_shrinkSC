@@ -1,0 +1,1 @@
+RvdwRatio 0.90 # shrink the Van der Waals radii of side chain atoms when calculate clash interaction

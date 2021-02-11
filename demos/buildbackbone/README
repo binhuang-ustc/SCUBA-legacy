@@ -1,0 +1,2 @@
+An example to build a backbone according to a sketch defining secondary structure elements on a grid.
+Run rundemo.sh will build the backbone, which can be used as an starting structure for SCUBA-driven SD to obtain optimized backbone.

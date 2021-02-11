@@ -1,0 +1,5 @@
+A simple (toy) example showing how to specify RMSD restraint in input to SCUBA-driven SD.
+RMSD restraint can be applied to confine the SD sampling to be  within a region close to
+a user-defined reference structure.
+The input parameters to define RMSD restraint in file sdwithrmsdrestraint.in.uncommneted include:
+"TotalRMSDRestrain", "RMSDRefPDBFile" and "RMSDRestrainedRegion"

@@ -1,0 +1,274 @@
+SCUBA SD version 0.1 started at 2021-02-10 22:52:10
+Echo of input control parameters:
+
+START SDInputOutput
+SDSeed	=	1357
+SDTotalSteps	=	5000
+EchoStartPDBFile	=	
+InputCoordFile	=	
+OutputCoordFile	=	
+OutputPDBFile	=	relax2.pdb
+RMSDRefPDBFile	=	
+END SDInputOutput
+START GenChain
+AllFixedSites	=	
+InputCoordFile	=	
+MCFixedSites	=	
+RMSDRefPDBFile	=	
+RefPDBFile	=	
+SCCoordFrom	=	startpdb_only
+SCTypeFrom	=	refpdb
+SeqString	=	
+StartPDBFile	=	relax1.pdb
+TypeInCoil	=	UMC
+TypeInHelix	=	ZMC
+TypeInStrand	=	ZMC
+END GenChain
+START SD
+DoShake	=	1
+FixMainChain	=	0
+NTrajSteps	=	0
+NeighborListSteps	=	50
+FrictionCoeff	=	1
+TimeStep	=	0.002
+AnnealingScheme	=
+Temperatures	=	0.5
+TrajFile	=	
+TemperatureGroups	=	all
+END SD
+START ForceField
+SideChainMMSteric	=	0
+CoreRegion	=
+ExtendRestrains	=
+RMSDRestrainedRegion	=
+StrandPairRestrains	=
+EAttraction	=	0
+KresStrandPair	=	50
+LSWeight	=	0.5
+LocalHBWeight	=	0.6
+PairPackingWeight	=	0.32
+PhiPsiWeight	=	2
+RAttractionOff	=	100
+RAttractionSwitch	=	1000
+SCPackingWeight	=	3.1
+ShadowWeight	=	0
+SideConfWeight	=	2.4
+StericWeight	=	1.4
+DisRestrains	=
+HelixRestrains	=
+LoopRegionWeights	=
+RgRestrain	=	0	0
+StrandRestrains	=
+CoreRegionBasePDB	=	
+SubStructureRestrains	=
+TotalRMSDRestrain	=
+END ForceField
+
+Summarizing results will be printed every 100 SD steps.
+The order of terms in the printed potential energy lists:
+TOTAL, bond, angle, improper_dihedral, ramachandran, rotamer, steric, sidechain_packing, mainchain_local_correlation, mainchain_local_hydrogenbond, mainchain_nonlocal_packing, other_structure_restraint, radius_of_gyration_restraint, secondary_structure_restraint
+
+Potential energies at starting point: 
+-3354.91  0.00114979  191.073  84.8418  -973.583  -265.744  57.8295  -778.813  -395.016  -629.114  -646.382  0  0  0  
+
+run 1 : nstepsrun: 100 , temperature: 0.391751
+energies:    -3004.32  0.0011054  347.226  165.096  -955.138  -251.557  62.436  -740.516  -389.411  -608.51  -633.951  0  0  0
+radius of gyration: 12.3372 , RMSD from reference, main chain: 0.201545 all atom: 0.279643
+
+run 2 : nstepsrun: 200 , temperature: 0.407097
+energies:    -2998.07  0.00103173  376.489  155.322  -970.149  -242.033  60.0668  -730.563  -386.267  -603.046  -657.886  0  0  0
+radius of gyration: 12.339 , RMSD from reference, main chain: 0.287623 all atom: 0.35572
+
+run 3 : nstepsrun: 300 , temperature: 0.43472
+energies:    -2979.02  0.00107696  374.548  140.505  -949.307  -246.798  66.8365  -718.248  -398.831  -596.238  -651.493  0  0  0
+radius of gyration: 12.3552 , RMSD from reference, main chain: 0.336902 all atom: 0.398834
+
+run 4 : nstepsrun: 400 , temperature: 0.429783
+energies:    -2913.89  0.00107051  449.878  150.068  -948.546  -252.121  65.6121  -727.818  -391.051  -598.56  -661.352  0  0  0
+radius of gyration: 12.3689 , RMSD from reference, main chain: 0.380664 all atom: 0.435789
+
+run 5 : nstepsrun: 500 , temperature: 0.453262
+energies:    -2944.65  0.00110905  380.756  151.401  -944.737  -243.956  55.2311  -720.616  -395.171  -598.532  -629.024  0  0  0
+radius of gyration: 12.3402 , RMSD from reference, main chain: 0.406878 all atom: 0.477398
+
+run 6 : nstepsrun: 600 , temperature: 0.464201
+energies:    -2956.06  0.00105711  397.093  148.502  -965.492  -236.367  61.175  -741.891  -382.798  -595.719  -640.559  0  0  0
+radius of gyration: 12.3395 , RMSD from reference, main chain: 0.403798 all atom: 0.502907
+
+run 7 : nstepsrun: 700 , temperature: 0.467128
+energies:    -2955.53  0.00109868  386.247  160.57  -971.485  -238.935  65.1865  -721.094  -393.36  -592.78  -649.879  0  0  0
+radius of gyration: 12.3719 , RMSD from reference, main chain: 0.406817 all atom: 0.525696
+
+run 8 : nstepsrun: 800 , temperature: 0.468034
+energies:    -2892.74  0.00104044  406.637  172.978  -961.319  -209.279  61.6833  -720.812  -386.291  -603.686  -652.657  0  0  0
+radius of gyration: 12.3917 , RMSD from reference, main chain: 0.414155 all atom: 0.520246
+
+run 9 : nstepsrun: 900 , temperature: 0.473837
+energies:    -2833.81  0.00108019  464.047  170.935  -961.301  -233.094  58.2756  -718.274  -382.084  -591.827  -640.492  0  0  0
+radius of gyration: 12.3888 , RMSD from reference, main chain: 0.411574 all atom: 0.502281
+
+run 10 : nstepsrun: 1000 , temperature: 0.501824
+energies:    -2858.45  0.00119954  421.101  193.002  -938.295  -235.306  62.9677  -730.723  -391.765  -594.104  -645.327  0  0  0
+radius of gyration: 12.3643 , RMSD from reference, main chain: 0.415572 all atom: 0.482714
+
+run 11 : nstepsrun: 1100 , temperature: 0.525281
+energies:    -2910.7  0.00110981  420.451  152.434  -944.642  -248.676  66.5324  -712.754  -390.491  -591.529  -662.026  0  0  0
+radius of gyration: 12.3686 , RMSD from reference, main chain: 0.429357 all atom: 0.499925
+
+run 12 : nstepsrun: 1200 , temperature: 0.481936
+energies:    -2861.17  0.00108423  408.943  177.514  -958.141  -228.998  60.5464  -704.108  -384.758  -591.42  -640.753  0  0  0
+radius of gyration: 12.392 , RMSD from reference, main chain: 0.435739 all atom: 0.505021
+
+run 13 : nstepsrun: 1300 , temperature: 0.489275
+energies:    -2884.37  0.00108259  426.703  170.584  -962.257  -225.199  69.5999  -723.574  -389.489  -604.404  -646.34  0  0  0
+radius of gyration: 12.4022 , RMSD from reference, main chain: 0.390001 all atom: 0.470876
+
+run 14 : nstepsrun: 1400 , temperature: 0.499725
+energies:    -2869.94  0.00115094  428.183  185.437  -955.377  -234.338  68.7828  -711.073  -396.529  -609.94  -645.084  0  0  0
+radius of gyration: 12.3687 , RMSD from reference, main chain: 0.375706 all atom: 0.468596
+
+run 15 : nstepsrun: 1500 , temperature: 0.494128
+energies:    -2862.93  0.00113905  388.145  204.638  -943.66  -236.977  68.7936  -704.89  -398.129  -598.628  -642.221  0  0  0
+radius of gyration: 12.3378 , RMSD from reference, main chain: 0.349359 all atom: 0.468513
+
+run 16 : nstepsrun: 1600 , temperature: 0.489591
+energies:    -2819.43  0.00115944  428.28  181.133  -945.177  -226.876  63.929  -699.537  -393.423  -594.679  -633.082  0  0  0
+radius of gyration: 12.3362 , RMSD from reference, main chain: 0.354724 all atom: 0.494189
+
+run 17 : nstepsrun: 1700 , temperature: 0.512445
+energies:    -2867.46  0.00107703  442.221  147.244  -957.799  -235.427  60.5289  -707.499  -380.98  -605.311  -630.435  0  0  0
+radius of gyration: 12.3565 , RMSD from reference, main chain: 0.380551 all atom: 0.500462
+
+run 18 : nstepsrun: 1800 , temperature: 0.516092
+energies:    -2861.38  0.00108268  443.016  161.488  -963.685  -222.106  53.6965  -724.435  -385.439  -597.951  -625.969  0  0  0
+radius of gyration: 12.3643 , RMSD from reference, main chain: 0.369773 all atom: 0.488004
+
+run 19 : nstepsrun: 1900 , temperature: 0.479901
+energies:    -2830.02  0.0011584  424.873  173.385  -949.496  -226.546  59.7978  -735.941  -380.32  -586.791  -608.982  0  0  0
+radius of gyration: 12.3562 , RMSD from reference, main chain: 0.360654 all atom: 0.474676
+
+run 20 : nstepsrun: 2000 , temperature: 0.506655
+energies:    -2861.88  0.00108408  425.884  166.6  -948.691  -238.883  58.699  -707.999  -385.393  -596.147  -635.949  0  0  0
+radius of gyration: 12.3381 , RMSD from reference, main chain: 0.300292 all atom: 0.399977
+
+run 21 : nstepsrun: 2100 , temperature: 0.498329
+energies:    -2871.35  0.00111192  429.728  167.72  -958.03  -241.673  69.4931  -711.071  -389.719  -598.704  -639.097  0  0  0
+radius of gyration: 12.342 , RMSD from reference, main chain: 0.334409 all atom: 0.419343
+
+run 22 : nstepsrun: 2200 , temperature: 0.503005
+energies:    -2868.05  0.00111843  390.366  153.5  -952.78  -254.809  58.5796  -684.661  -384.558  -565.24  -628.444  0  0  0
+radius of gyration: 12.3495 , RMSD from reference, main chain: 0.369347 all atom: 0.459581
+
+run 23 : nstepsrun: 2300 , temperature: 0.524578
+energies:    -2885.78  0.00104374  415.906  168.439  -963.898  -240.292  58.617  -694.738  -389.446  -603.172  -637.196  0  0  0
+radius of gyration: 12.3313 , RMSD from reference, main chain: 0.389135 all atom: 0.492236
+
+run 24 : nstepsrun: 2400 , temperature: 0.518356
+energies:    -2858.18  0.000985486  469.36  139.119  -956.224  -231.455  69.7376  -701.35  -387.676  -617.189  -642.507  0  0  0
+radius of gyration: 12.3184 , RMSD from reference, main chain: 0.375986 all atom: 0.499369
+
+run 25 : nstepsrun: 2500 , temperature: 0.524607
+energies:    -2834.62  0.00104187  440.751  179.162  -943.579  -245.427  58.8006  -704.61  -387.584  -594.589  -637.547  0  0  0
+radius of gyration: 12.3499 , RMSD from reference, main chain: 0.410997 all atom: 0.513885
+
+run 26 : nstepsrun: 2600 , temperature: 0.505199
+energies:    -2842.39  0.00098212  410.998  176.793  -951.01  -235.883  62.9388  -696.735  -389.337  -578.813  -641.343  0  0  0
+radius of gyration: 12.3941 , RMSD from reference, main chain: 0.413594 all atom: 0.540575
+
+run 27 : nstepsrun: 2700 , temperature: 0.527374
+energies:    -2886.65  0.00111173  388.375  161.969  -944.431  -214.428  56.975  -713.715  -390.294  -595.228  -635.878  0  0  0
+radius of gyration: 12.4009 , RMSD from reference, main chain: 0.407887 all atom: 0.559072
+
+run 28 : nstepsrun: 2800 , temperature: 0.482791
+energies:    -2850.79  0.0010222  430.79  164.108  -947.85  -218.217  62.819  -744.342  -382.934  -572.567  -642.594  0  0  0
+radius of gyration: 12.3872 , RMSD from reference, main chain: 0.442432 all atom: 0.56369
+
+run 29 : nstepsrun: 2900 , temperature: 0.521906
+energies:    -2889.07  0.00115904  418.53  169.42  -924.404  -232.319  59.637  -738.801  -393.989  -594.466  -652.681  0  0  0
+radius of gyration: 12.38 , RMSD from reference, main chain: 0.439383 all atom: 0.547296
+
+run 30 : nstepsrun: 3000 , temperature: 0.507682
+energies:    -2870.24  0.00108227  416.98  166.869  -916.735  -249.57  62.077  -715.215  -393.318  -595.532  -645.796  0  0  0
+radius of gyration: 12.3645 , RMSD from reference, main chain: 0.453635 all atom: 0.550817
+
+run 31 : nstepsrun: 3100 , temperature: 0.49711
+energies:    -2894.79  0.00116219  418.593  173.119  -933.724  -261.804  63.8989  -738.605  -388.626  -587.867  -639.779  0  0  0
+radius of gyration: 12.3494 , RMSD from reference, main chain: 0.444329 all atom: 0.526992
+
+run 32 : nstepsrun: 3200 , temperature: 0.482075
+energies:    -2868.36  0.00102114  439.502  149.296  -954.067  -228.967  66.6289  -725.617  -395.131  -582.993  -637.01  0  0  0
+radius of gyration: 12.3434 , RMSD from reference, main chain: 0.437886 all atom: 0.507127
+
+run 33 : nstepsrun: 3300 , temperature: 0.503664
+energies:    -2888.35  0.00101692  392.18  179.096  -947.496  -229.345  61.0609  -726.3  -391.159  -590.554  -635.83  0  0  0
+radius of gyration: 12.3671 , RMSD from reference, main chain: 0.383576 all atom: 0.470788
+
+run 34 : nstepsrun: 3400 , temperature: 0.496368
+energies:    -2838.64  0.00118713  465.722  180.785  -948.662  -239.059  65.6017  -730.944  -383.43  -596.992  -651.662  0  0  0
+radius of gyration: 12.369 , RMSD from reference, main chain: 0.367818 all atom: 0.465253
+
+run 35 : nstepsrun: 3500 , temperature: 0.493521
+energies:    -2838.02  0.00104604  461.051  177.697  -932.296  -235.697  64.4873  -733.168  -393.333  -589.568  -657.196  0  0  0
+radius of gyration: 12.3674 , RMSD from reference, main chain: 0.369744 all atom: 0.475438
+
+run 36 : nstepsrun: 3600 , temperature: 0.514955
+energies:    -2844.54  0.00104749  425.966  176.166  -950.693  -231.935  53.1996  -705.762  -385.442  -586.281  -639.754  0  0  0
+radius of gyration: 12.3822 , RMSD from reference, main chain: 0.378897 all atom: 0.500028
+
+run 37 : nstepsrun: 3700 , temperature: 0.503909
+energies:    -2798.46  0.000979549  432.749  185.815  -947.265  -215.99  59.8423  -700.574  -384.646  -578.722  -649.672  0  0  0
+radius of gyration: 12.393 , RMSD from reference, main chain: 0.41638 all atom: 0.537081
+
+run 38 : nstepsrun: 3800 , temperature: 0.482545
+energies:    -2808.49  0.0011242  452.439  187.945  -948.367  -243.877  67.3228  -688.397  -387.253  -583.634  -664.672  0  0  0
+radius of gyration: 12.4042 , RMSD from reference, main chain: 0.442651 all atom: 0.555663
+
+run 39 : nstepsrun: 3900 , temperature: 0.519214
+energies:    -2857.55  0.00108751  397.925  179.346  -941.899  -252.539  59.5553  -658.538  -393.336  -602.564  -645.5  0  0  0
+radius of gyration: 12.3985 , RMSD from reference, main chain: 0.425174 all atom: 0.555841
+
+run 40 : nstepsrun: 4000 , temperature: 0.512334
+energies:    -2844.37  0.00115285  421.013  181.09  -955.934  -219.27  61.5935  -698.766  -396.13  -588.572  -649.397  0  0  0
+radius of gyration: 12.3662 , RMSD from reference, main chain: 0.433756 all atom: 0.565496
+
+run 41 : nstepsrun: 4100 , temperature: 0.536426
+energies:    -2881.74  0.00115495  405.614  179.865  -946.782  -251.784  59.1651  -692.583  -393.242  -598.927  -643.067  0  0  0
+radius of gyration: 12.3473 , RMSD from reference, main chain: 0.398997 all atom: 0.516686
+
+run 42 : nstepsrun: 4200 , temperature: 0.524064
+energies:    -2913.25  0.00114577  415.154  163.525  -961.832  -260.706  64.7828  -695.08  -389.577  -606.767  -642.746  0  0  0
+radius of gyration: 12.3383 , RMSD from reference, main chain: 0.383206 all atom: 0.474203
+
+run 43 : nstepsrun: 4300 , temperature: 0.514096
+energies:    -2902.06  0.000983407  419.349  155.221  -951.285  -240.699  55.4733  -705.228  -391.08  -601.428  -642.381  0  0  0
+radius of gyration: 12.361 , RMSD from reference, main chain: 0.391578 all atom: 0.463045
+
+run 44 : nstepsrun: 4400 , temperature: 0.478224
+energies:    -2882.21  0.00103847  418.082  175.827  -946.122  -235.343  54.704  -702.086  -391.518  -610.883  -644.867  0  0  0
+radius of gyration: 12.3572 , RMSD from reference, main chain: 0.417279 all atom: 0.48456
+
+run 45 : nstepsrun: 4500 , temperature: 0.51501
+energies:    -2899.41  0.00102893  413.608  164.411  -952.219  -246.907  63.9388  -708.106  -402.088  -594.913  -637.14  0  0  0
+radius of gyration: 12.3513 , RMSD from reference, main chain: 0.441276 all atom: 0.51826
+
+run 46 : nstepsrun: 4600 , temperature: 0.490808
+energies:    -2851.01  0.00112982  424.072  153.779  -966.366  -219.995  58.4817  -732.694  -377.973  -562.179  -628.14  0  0  0
+radius of gyration: 12.364 , RMSD from reference, main chain: 0.492377 all atom: 0.548225
+
+run 47 : nstepsrun: 4700 , temperature: 0.494187
+energies:    -2860.18  0.000959792  414.498  171.833  -982.726  -224.735  58.5056  -675.814  -387.374  -590.74  -643.633  0  0  0
+radius of gyration: 12.356 , RMSD from reference, main chain: 0.45195 all atom: 0.554084
+
+run 48 : nstepsrun: 4800 , temperature: 0.515176
+energies:    -2869.82  0.00105147  413.289  171.673  -952.875  -234.368  75.513  -695.099  -395.088  -610.104  -642.759  0  0  0
+radius of gyration: 12.3328 , RMSD from reference, main chain: 0.450908 all atom: 0.540291
+
+run 49 : nstepsrun: 4900 , temperature: 0.493117
+energies:    -2829.05  0.00115493  422.232  194.703  -962.742  -231  69.3863  -686.34  -392.158  -605.447  -637.686  0  0  0
+radius of gyration: 12.3157 , RMSD from reference, main chain: 0.434578 all atom: 0.539198
+
+run 50 : nstepsrun: 5000 , temperature: 0.510767
+energies:    -2848.73  0.00102448  393.083  161.341  -944.759  -246.593  60.206  -657.825  -395.005  -589.555  -629.627  0  0  0
+radius of gyration: 12.3324 , RMSD from reference, main chain: 0.445132 all atom: 0.542333
+
+SCUBA SD version 0.1 successfully finished at 2021-02-10 22:55:36

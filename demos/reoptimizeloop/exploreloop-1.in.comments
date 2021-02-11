@@ -1,0 +1,63 @@
+START LoopExploreParam
+#loop position chain 0, from residue 7 to 12, inclusive, -1 means loop length will be varied
+LoopDescriptors    =    0 7 12 -1
+# maximum number of tries to close a loop with given a configuration(start, end, and length)
+MaxLinkTryTimes =       1000
+#the new loop can be MaxExtendLen longer than the original loop
+MaxExtendLen    =       1
+# starting and ending points may change at to flanking positions.
+# with MaxShiftLen = 2, the possible starts are 5,6,7, the possible ends are 12,13 and 14
+MaxShiftLen     =       2
+#minimum loop length
+MinLoopLen	=	5
+#maximum loop length (if shorter than original loop length+MaxExtendLen, this will be used)
+MaxLoopLen	=	7
+#If the loop energy vary range is lower than EneFlucCutoff in last NumRunsThreshold*100
+#steps, the SD optimization of the loop will consdiered to be coverged and
+# the current loop configuration will be saved.
+NumRunsThreshold        =       5
+EneFlucCutoff   =       30.0
+#If the SD optimization does not converge in MaxNumRuns*100 SD steps, the loop configuration
+#will be discarded
+MaxNumRuns      =       30
+#If the loop energy after NumRunsEneCheckPoint*100 SD steps is still higher than
+#TotEnergyCheckPoint, the loop configuration will be discarded
+NumRunsEneCheckPoint    =       10
+TotEnergyCheckPoint     =       1000.0
+#The maximum number of successfully generated loops for a particular loop
+#configuration (start,end, and length) is MaxNumOptmLoopsEach 
+MaxNumOptmLoopsEach     =       200
+#If loop was not successfully optimized in 3 sucessive SD optimizations, 
+#the loop configuration(start,end, length) is considered not plausible.
+MaxSDTimesOfOneLoop     =       3
+#file to store the successfully optimized loops
+AllKeptLoopsFile     =       sampledloops-1.dat
+END LoopExploreParam
+
+START SDInputOutput
+SDSeed  =       1357
+SDTotalSteps    =      0
+END SDInputOutput
+START SD
+DoShake =       1
+FrictionCoeff   =       5.0
+NeighborListSteps       =       50
+Temperatures    =       0.5
+TimeStep        =       0.002
+END SD
+START GenChain
+SCCoordFrom     =       startpdb_only
+SCTypeFrom      =       refpdb
+StartPDBFile    =       startconf.pdb
+END GenChain
+START ForceField
+LocalHBWeight   =       0.00
+PairPackingWeight       =       0.32
+PhiPsiWeight    =       2.00
+RAttractionOff  =       100
+RAttractionSwitch       =       80
+SCPackingWeight =       3.10
+SideChainMMSteric       =       0
+SideConfWeight  =       2.40
+StericWeight    =       1.40
+END ForceField

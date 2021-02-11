@@ -1,0 +1,29 @@
+START SDInputOutput
+OutputPDBFile	=	sdwithrmsdrestraint_out.pdb
+SDSeed=23333
+SDTotalSteps	=	200
+END SDInputOutput
+START SD
+DoShake	=	1
+NeighborListSteps	=	50
+TimeStep	=	0.002
+FrictionCoeff	=	0.5
+Temperatures	=	1.0
+END SD
+START GenChain
+StartPDBFile	=	start.pdb
+RefPDBFile	=  	start.pdb
+SCTypeFrom	=	refpdb
+SCCoordFrom     =       startpdb_only
+RMSDRefPDBFile = restrainreference.pdb
+END GenChain
+START ForceField
+PhiPsiWeight	=	2.00
+LSWeight	=	0.50
+LocalHBWeight	=	0.60
+PairPackingWeight	=	0.32
+StericWeight	=	1.40
+SideConfWeight	=	2.4
+SCPackingWeight	=	3.1
+TotalRMSDRestrain = total_mode 2.5  100.0 sseonly
+END ForceField

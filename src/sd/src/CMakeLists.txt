@@ -1,0 +1,1 @@
+add_library(sd forcefield.cpp forcefield_omp.cpp genchain.cpp cbpairene.cpp shakebonds.cpp stochasticdynamics.cpp sdrun.cpp gasdcontrol.cpp restraints.cpp bsinchain.cpp nnterm.cpp ssrestraint.cpp sidechainff.cpp shadowterm.cpp anlytsasa.cpp activeselections.cpp sdparam.cpp loopexplorationio.cpp)

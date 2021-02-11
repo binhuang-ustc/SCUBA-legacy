@@ -1,0 +1,14 @@
+Examples of using ABACUS2 to design sequence for a given backbone.
+And relax the backbone with SCUBA SD to accomodate the selected sidechains.
+
+
+File target.pdb: the backbone for which sequences are to be selected.
+
+In SelectSequenceDemo.sh, it is explained how to use default or alternated ABACUS2 parameters.
+
+In RelaxBackboneDemo.sh, we give an example of using two successive SD simulations to relax a backbone after select sidechains with ABACUS2.
+
+In real applications, the backbone relaxation step and sequence selection step can be iterated.
+
+Note: the internal data files needed by ABACUS2 are of very large sizes. Thus they are bundled into a separate package.
+You need to download them from https://github.com/binhuang-ustc/ABACUS2-data.git before run SelectSequenceDemo.sh.

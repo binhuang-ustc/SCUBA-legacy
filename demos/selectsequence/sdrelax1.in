@@ -1,0 +1,33 @@
+START SDInputOutput
+OutputPDBFile	=	relax1.pdb
+SDSeed	=	1357
+SDTotalSteps	=	2000
+END SDInputOutput
+START SD
+AnnealingScheme	=
+DoShake	=	1
+FixMainChain	=	0
+FrictionCoeff	=	5.0
+NTrajSteps	=	0
+NeighborListSteps	=	50
+Temperatures	=	0.2
+TimeStep	=	0.002
+END SD
+START GenChain
+SCCoordFrom	=	startpdb_only
+SCTypeFrom	=	refpdb
+StartPDBFile	=	seqdesign.pdb
+END GenChain
+START ForceField
+KresStrandPair	=	50
+LSWeight	=	0.50
+LocalHBWeight	=	0.60
+PairPackingWeight	=	0.32
+PhiPsiWeight	=	2.00
+RAttractionOff	=	100
+RgRestrain	=	0.0 0.0
+SCPackingWeight	=	3.10
+SideChainMMSteric	=	0
+SideConfWeight	=	2.40
+StericWeight	=	1.40
+END ForceField

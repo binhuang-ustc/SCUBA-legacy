@@ -1,0 +1,81 @@
+SCUBA SD version 0.1 started at 2021-02-10 23:53:47
+Echo of input control parameters:
+
+START SDInputOutput
+SDSeed	=	23333
+SDTotalSteps	=	200
+EchoStartPDBFile	=	
+InputCoordFile	=	
+OutputCoordFile	=	
+OutputPDBFile	=	sdwithrmsdrestraint_out.pdb
+END SDInputOutput
+START GenChain
+AllFixedSites	=	
+InputCoordFile	=	
+MCFixedSites	=	
+RMSDRefPDBFile	=	restrainreference.pdb
+RefPDBFile	=	start.pdb
+SCCoordFrom	=	startpdb_only
+SCTypeFrom	=	refpdb
+SeqString	=	
+StartPDBFile	=	start.pdb
+TypeInCoil	=	UMC
+TypeInHelix	=	ZMC
+TypeInStrand	=	ZMC
+END GenChain
+START SD
+DoShake	=	1
+FixMainChain	=	0
+NTrajSteps	=	100
+NeighborListSteps	=	50
+FrictionCoeff	=	0.5
+TimeStep	=	0.002
+AnnealingScheme	=
+Temperatures	=	1
+TrajFile	=	
+TemperatureGroups	=	all
+END SD
+START ForceField
+SideChainMMSteric	=	0
+CoreRegion	=
+ExtendRestrains	=
+RMSDRestrainedRegion	=
+StrandPairRestrains	=
+EAttraction	=	0
+KresStrandPair	=	50
+LSWeight	=	0.5
+LocalHBWeight	=	0.6
+PairPackingWeight	=	0.32
+PhiPsiWeight	=	2
+RAttractionOff	=	10000
+RAttractionSwitch	=	1000
+SCPackingWeight	=	3.1
+ShadowWeight	=	0
+SideConfWeight	=	2.4
+StericWeight	=	1.4
+DisRestrains	=
+HelixRestrains	=
+LoopRegionWeights	=
+RgRestrain	=	100	0
+StrandRestrains	=
+CoreRegionBasePDB	=	
+SubStructureRestrains	=
+TotalRMSDRestrain	=	total_mode	2.5	100.0	sseonly
+END ForceField
+
+Summarizing results will be printed every 100 SD steps.
+The order of terms in the printed potential energy lists:
+TOTAL, bond, angle, improper_dihedral, ramachandran, rotamer, steric, sidechain_packing, mainchain_local_correlation, mainchain_local_hydrogenbond, mainchain_nonlocal_packing, other_structure_restraint, radius_of_gyration_restraint, secondary_structure_restraint
+
+Potential energies at starting point: 
+-2682.49  0.00107837  232.218  72.3896  -1023.02  -66.2989  55.0445  -793.293  -279.508  -379.97  -678.948  178.893  0  0  
+
+run 1 : nstepsrun: 100 , temperature: 0.59907
+energies:    -2028.71  0.00112768  561.799  201.155  -972.661  -34.9426  62.6689  -745.208  -265.026  -347.433  -656.464  167.399  0  0
+radius of gyration: 12.4467 , RMSD from reference, main chain: 5.17753 all atom: 6.01816
+
+run 2 : nstepsrun: 200 , temperature: 0.668792
+energies:    -2047.38  0.00107492  556.604  193.162  -959.31  -48.3701  59.562  -735.863  -261.186  -347.278  -659.582  154.877  0  0
+radius of gyration: 12.4522 , RMSD from reference, main chain: 5.1313 all atom: 5.98446
+
+SCUBA SD version 0.1 successfully finished at 2021-02-10 23:53:49

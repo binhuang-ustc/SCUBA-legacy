@@ -1,0 +1,72 @@
+START SDInputOutput
+EchoStartPDBFile        =
+OutputCoordFile =
+OutputPDBFile   = 
+SDSeed  =       1357
+SDTotalSteps    =      0
+END SDInputOutput
+START SD
+AnnealingScheme =
+DoShake =       1
+FixMainChain    =       0
+FrictionCoeff   =       5.0
+NTrajSteps      =       0
+NeighborListSteps       =       50
+Temperatures    =       0.5
+TimeStep        =       0.002
+TrajFile        =
+END SD
+START GenChain
+InputCoordFile  =
+RMSDRefPDBFile  =
+RefPDBFile      =
+SCCoordFrom     =       startpdb_only
+SCTypeFrom      =       refpdb
+SeqString       =
+StartPDBFile    =       startconf.pdb
+TypeInCoil      =       
+TypeInHelix     =       
+TypeInStrand    =       
+END GenChain
+START ForceField
+CoreRegion      =
+CoreRegionBasePDB       =
+DisRestrains    =
+EAttraction     =       0
+ExtendRestrains =
+HelixRestrains  =
+KresStrandPair  =       50
+LSWeight        =       0.50
+LocalHBWeight   =       0.00
+LoopRegionWeights       =
+PairPackingWeight       =       0.32
+PhiPsiWeight    =       2.00
+RAttractionOff  =       100
+RAttractionSwitch       =       80
+RMSDRestrainedRegion    =
+RgRestrain      =       0 0
+SCPackingWeight =       3.10
+ShadowWeight    =       0.00
+SideChainMMSteric       =       0
+SideConfWeight  =       2.40
+StericWeight    =       1.40
+StrandPairRestrains     =
+SubStructureRestrains   =
+TotalRMSDRestrain       =
+END ForceField
+START LoopExploreParam
+LoopDescriptors    =    0 58 64 -1
+MaxLinkTryTimes =       1000
+MaxExtendLen    =       1
+MaxShiftLen     =       2
+MinLoopLen	=	5
+MaxLoopLen	=	7
+NumRunsThreshold        =       5
+EneFlucCutoff   =       30.0
+MaxNumRuns      =       30
+NumRunsEneCheckPoint    =       10
+TotEnergyCheckPoint     =       1000.0
+MaxNumOptmLoopsEach     =       200
+MaxSDTimesOfOneLoop     =       3
+AllKeptLoopsFile     =       sampledloops-4.dat
+END LoopExploreParam

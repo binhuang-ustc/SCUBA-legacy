@@ -1,0 +1,22 @@
+# Direction
+# A n*3 double matrix
+0       0       1.0
+0       0       -1.0
+
+# Strand & helix infomation
+# 0     1       2       3       4       5       6       7
+# x     y       z       length  dir     forward strand  Llinker
+0       0       0       7       1       1       1       7
+7       -10     0       16      1       0       0       8
+16      0       0       7       1       1       1       6
+24      0       0       7       1       0       1       7
+17      -10     0       16      1       1       0       8
+8       0       0       7       1       0       1       0
+
+# (x,y,z)       : double, the start of strand/helix builder
+# length        : int
+# dir           : int, direction code, dir=1, use Direction[0]
+# forward       : bool
+# strand        : bool, strand=1, strand; strand=0, helix
+# Llinker       : int, length of the linker
+# The matrix reader will stop when it meets '#' or '\n' as the first char of the line
